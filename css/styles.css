@@ -90,7 +90,7 @@ img {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.11; /* 111.111% */
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
@@ -98,14 +98,14 @@ img {
   color: var(--primary-color);
   font-size: 20px;
   font-weight: 500;
-  line-height: 1.2; /* 120% */
+  line-height: 1.2;
   letter-spacing: 0.02em;
 }
 .card-descr {
   color: var(--text-color);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5; /* 150% */
+  line-height: 1.5;
   letter-spacing: 0.02em;
 }
 .hide {
@@ -135,10 +135,6 @@ img {
     max-width: 1158px;
     padding: 0 16px;
   }
-}
-.menu {
-  /* display: flex;
-  align-items: center; */
 }
 @media (min-width: 768px) {
   .menu {
@@ -210,16 +206,11 @@ img {
   font-style: normal;
   display: none;
 }
-/* .contact-item {
-  display: flex;
-  gap: 40px;
-  padding: 24px 0;
-} */
 .contact-item-link {
   color: var(--text-color);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5; /* 150% */
+  line-height: 1.5;
   letter-spacing: 0.02em;
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -293,7 +284,7 @@ img {
   text-align: center;
   font-size: 56px;
   font-weight: 700;
-  line-height: 1.07; /* 107.143% */
+  line-height: 1.07;
   letter-spacing: 0.02em;
 }
 .btn-hero {
@@ -305,37 +296,80 @@ img {
 
 /* ===================ADVANTAGES=================== */
 .advantages {
-  padding: 120px 0;
-  min-height: 344px;
+  padding: 96px 0;
+}
+.advantages-container {
+  padding: 0 16px;
 }
 .advantages-icon-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.advantages-icon-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 264px;
-  height: 112px;
-  border-radius: 4px;
-  background: var(--cloud-color, #f4f4fd);
-  margin-bottom: 8px;
-}
-.advantages-icon-img {
-  width: 64px;
-  height: 64px;
+  display: none;
 }
 .card-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
 }
 .card-item {
-  max-width: 264px;
+  max-width: 356px;
 }
 .card-title {
   margin-bottom: 8px;
+}
+.advantages-card-title {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+}
+.advantages-card-descr {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 1158px) {
+  .advantages {
+    padding: 120px 0;
+    min-height: 344px;
+  }
+  .advantages-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .advantages-icon-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background: var(--cloud-color, #f4f4fd);
+    margin-bottom: 8px;
+  }
+  .advantages-icon-img {
+    width: 64px;
+    height: 64px;
+  }
+  .card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .advantages-card-title {
+    font-size: 20px;
+  }
+  .advantages-card-descr {
+    font-weight: 400;
+  }
+  .card-item {
+    max-width: 264px;
+  }
 }
 /* ===================/ADVANTAGES=================== */
 
@@ -430,16 +464,21 @@ img {
 .customers {
   padding: 120px 0;
 }
+.customers-container {
+  padding: 0 16px;
+}
 .customers-title {
   margin-bottom: 72px;
 }
 .customers-wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 .customers-item {
-  width: 168px;
+  /* width: 190px; */
+  width: calc((100% - 32px) / 2);
   height: 88px;
 }
 .customers-link {
@@ -461,6 +500,22 @@ img {
 }
 .customers-img {
   fill: currentColor;
+}
+@media (min-width: 428px) {
+  .customers-wrapper {
+    gap: 24px;
+  }
+  .customers-item {
+    width: 168px;
+    height: 88px;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1158px) {
+  .customers-wrapper {
+    flex-wrap: nowrap;
+  }
 }
 
 /* ===================/CUSTOMERS=================== */
