@@ -394,17 +394,18 @@ img {
 .team {
   background-color: var(--cloud-color);
   min-height: 732px;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .team-title {
   margin-bottom: 72px;
 }
 .team-card-wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 72px;
+  column-gap: 24px;
 }
-
 .team-card {
   background-color: var(--white-color);
   width: 264px;
@@ -450,6 +451,25 @@ img {
 }
 .team-social-img {
   fill: var(--cloud-color);
+}
+
+@media (min-width: 428px) {
+}
+@media (min-width: 768px) {
+  .team-card-wrapper {
+    row-gap: 64px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+  }
+  .team-card-wrapper {
+    justify-content: space-between;
+    max-width: 1158px;
+  }
 }
 
 /* ===================/TEAM=================== */
