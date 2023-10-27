@@ -253,6 +253,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .header-menu-burger {
@@ -261,6 +264,103 @@ img {
 }
 
 /* ===================/HEADER=================== */
+
+/* ===================Mobile Menu=================== */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 35px 40px 40px;
+  background-color: #fff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: auto;
+}
+
+.mobile-menu-link {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.mobile-menu-link.current {
+  color: var(--pressed-color);
+}
+.mobile-menu-close-icon {
+  fill: var(--primary-color);
+}
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.mobile-menu-contacts-tel {
+  color: var(--brand-color);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.mobile-menu-contacts-email {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+}
+.team-social-wrapper.mobile-menu-social-wrapper {
+  justify-content: start;
+  gap: 56px;
+}
+
+@media (max-width: 375px) {
+  .mobile-menu-contacts-tel {
+    font-size: 25px;
+  }
+  .team-social-wrapper.mobile-menu-social-wrapper {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+/* =============/Mobile Menu=================== */
 
 /* ===================HERO=================== */
 .hero {
