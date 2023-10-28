@@ -477,10 +477,10 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
 }
 .card-item {
-  max-width: 356px;
+  max-width: 396px;
 }
 .card-title {
   margin-bottom: 8px;
@@ -500,6 +500,17 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+@media (min-width: 768px) {
+  .card-wrapper {
+    column-gap: 24px;
+  }
+  .card-item {
+    max-width: 356px;
+  }
+  .card-title {
+    text-align: start;
+  }
 }
 @media (min-width: 1158px) {
   .advantages {
