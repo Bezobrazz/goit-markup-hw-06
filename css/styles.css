@@ -365,35 +365,101 @@ img {
 
 /* ===================HERO=================== */
 .hero {
-  min-height: 600px;
+  min-height: 428px;
   max-width: 1440px;
   margin: 0 auto;
   padding: 188px 0;
   background-color: var(--primary-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero/hero-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    url('../images/hero/hero-bg@1x-mobile.jpg');
 }
+@media only screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+  (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg@2x-mobile.jpg');
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg@1x-tablet.jpg');
+  }
+}
+@media only screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg@2x-tablet.jpg');
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg@1x-desk.jpg');
+  }
+}
+@media only screen and (min-width: 1168px) and (min-device-pixel-ratio: 2),
+  (min-width: 1168px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/hero-bg@2x-desk.jpg');
+  }
+}
+
 .hero-title {
-  max-width: 496px;
+  max-width: 320px;
   margin: 0 auto;
   margin-bottom: 48px;
   color: var(--white-color);
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.1;
   letter-spacing: 0.02em;
 }
 .btn-hero {
   display: block;
   margin: 0 auto;
   min-width: 169px;
+}
+@media (min-width: 428px) {
+}
+@media (min-width: 768px) {
+  .hero {
+    min-height: 436px;
+  }
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+}
+@media (min-width: 1158px) {
+  .hero {
+    min-height: 600px;
+  }
 }
 /* ===================/HERO=================== */
 
